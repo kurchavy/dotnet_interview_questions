@@ -17,6 +17,7 @@ For more content like this be sure to join 10,500+ engineers to my .NET Pro Week
 8. **What are the different types of classes in C#?**
 9. **Can you describe what a namespace is and how it is used in C#?**
 10. **What is encapsulation?**
+11. **В чем разница между throw и throw ex?**
 
 ## Intermediate
 
@@ -202,6 +203,10 @@ class Program
 ```
 
 In this example, the name field of the Person class is encapsulated and only accessible via the Name property. This approach allows the Person class to control how the name field is accessed and modified, ensuring that any rules or validations about the data can be applied within the class itself.
+
+### B11. В чем разница между throw и throw ex?
+
+**Ответ:** Когда вы пишете **throw** вы выбрасываете исходное исключение с оригинальным стеком. **throw ex** - стек обрезается и начинается с текущего места.
 
 ## Intermediate
 
