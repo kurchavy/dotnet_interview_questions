@@ -1,5 +1,8 @@
 # .NET (C#) Interview Questions and Answers
 
+Link1 https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c<br>
+Link2 https://bool.dev/blog/detail/voprosy-na-sobesedovanii-dlya-senior-net-developer
+
 ## Basic
 
 1. **What is .NET?**
