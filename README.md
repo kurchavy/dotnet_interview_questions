@@ -27,9 +27,8 @@
 9. **What are extension methods and where would you use them?**
 10. **How do you handle exceptions in a method that returns a Task?**
 11. **Что такое ковариантность и контрвариантность?**
-12. **Что такое GAC?**
-13. **Пример использования yield**
-14. **Ключевое слово volatile**
+12. **Пример использования yield**
+13. **Ключевое слово volatile**
 
 ## Advanced
 
