@@ -1,10 +1,5 @@
 # .NET (C#) Interview Questions and Answers
 
-This document contains a collection of 50 interview questions related to .NET and the C# programming language, aimed at assessing candidates at various levels of expertise.
-
-For more content like this be sure to join 10,500+ engineers to my .NET Pro Weekly Newsletter: https://stefandjokic.tech/?utm_source=github
-
-***These are only technical questions, it is not guaranteed that you will pass the interview if you know all the questions.***
 ## Basic
 
 1. **What is .NET?**
@@ -31,6 +26,7 @@ For more content like this be sure to join 10,500+ engineers to my .NET Pro Week
 8. **Describe the Entity Framework and its advantages.**
 9. **What are extension methods and where would you use them?**
 10. **How do you handle exceptions in a method that returns a Task?**
+11. **Что такое ковариантность и контрвариантность?**
 
 ## Advanced
 
@@ -772,6 +768,24 @@ public async Task ExecuteAsync()
 In this example, DivideAsync performs a division operation asynchronously and may throw a DivideByZeroException. The exception is handled in the ExecuteAsync method, demonstrating how to properly handle exceptions for tasks in asynchronous methods.
 
 Handling exceptions in tasks is crucial for writing robust and error-resistant asynchronous C# applications, ensuring that your application can gracefully recover from errors encountered during asynchronous operations.
+
+### I11. Что такое ковариантность и контрвариантность?
+**Ответ:** это термины, связанные с отношениями типов в C# при работе с дженериками, делегатами или массивами. Они описывают, как производный тип может использоваться вместо базового типа (или наоборот) при назначении переменных, параметров или возвращаемых значений.
+
+- **ковариантность** (от менее производного типа к более производному типу): Ковариация позволяет использовать более производный тип вместо исходного параметра универсального типа. В C# ковариация поддерживается для массивов, интерфейсов с универсальными параметрами и делегатов с соответствующими возвращаемыми типами.
+```csharp
+IEnumerable<string> strings = new List<string>();
+IEnumerable<object> objects = strings; // Covariant assignment
+```
+- **контрвариантность** (от более производного типа к менее производному типу): Контравариантность позволяет использовать менее производный тип вместо исходного параметра универсального типа. В C# контравариантность поддерживается для интерфейсов с универсальными параметрами, отмеченными ключевым словом in, и делегатов с соответствующими входными параметрами.
+```csharp
+IComparer<object> objectComparer = Comparer<object>.Default;
+IComparer<string> stringComparer = objectComparer; // Contravariant assignment
+
+// Using contravariant delegate
+Action<object> setObject = obj => Console.WriteLine(obj);
+Action<string> setString = setObject;
+```
 
 ## Advanced
 
