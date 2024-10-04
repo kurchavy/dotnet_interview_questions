@@ -27,6 +27,7 @@
 9. **What are extension methods and where would you use them?**
 10. **How do you handle exceptions in a method that returns a Task?**
 11. **Что такое ковариантность и контрвариантность?**
+12. **Что такое GAC?**
 
 ## Advanced
 
@@ -785,6 +786,12 @@ IComparer<string> stringComparer = objectComparer; // Contravariant assignment
 // Using contravariant delegate
 Action<object> setObject = obj => Console.WriteLine(obj);
 Action<string> setString = setObject;
+```
+
+### I11. Что такое GAC?
+**Ответ:** Глобальный кэш сборок (GAC) — это централизованный репозиторий или кэш для хранения и совместного использования сборок .NET (DLL) на компьютере. GAC является частью .NET Framework и используется для предотвращения конфликтов DLL и обеспечения параллельного выполнения различных версий одной и той же сборки. Сборки, хранящиеся в GAC, должны иметь строгое имя, которое состоит из имени сборки, номера версии, информации о культуре (если применимо) и токена открытого ключа (сгенерированного из закрытого ключа разработчика). Это строгое имя позволяет GAC однозначно идентифицировать и управлять каждой сборкой и ее версиями. Чтобы установить сборку в GAC, можно использовать утилиту gacutil или перетащить сборку в папку GAC с помощью проводника Windows.
+```
+gacutil -i MyAssembly.dll
 ```
 
 ## Advanced
