@@ -20,72 +20,45 @@ For more content like this be sure to join 10,500+ engineers to my .NET Pro Week
 
 ## Intermediate
 
-11. **Explain polymorphism and its types in C#.**
-12. **What are delegates and how are they used in C#?**
-13. **Describe what LINQ is and give an example of where it might be used.**
-14. **What is the difference between an abstract class and an interface?**
-15. **How do you manage memory in .NET applications?**
-16. **Explain the concept of threading in .NET.**
-17. **What is async/await and how does it work?**
-18. **Describe the Entity Framework and its advantages.**
-19. **What are extension methods and where would you use them?**
-20. **How do you handle exceptions in a method that returns a Task?**
+1. **Explain polymorphism and its types in C#.**
+2. **What are delegates and how are they used in C#?**
+3. **Describe what LINQ is and give an example of where it might be used.**
+4. **What is the difference between an abstract class and an interface?**
+5. **How do you manage memory in .NET applications?**
+6. **Explain the concept of threading in .NET.**
+7. **What is async/await and how does it work?**
+8. **Describe the Entity Framework and its advantages.**
+9. **What are extension methods and where would you use them?**
+10. **How do you handle exceptions in a method that returns a Task?**
 
 ## Advanced
 
-21. **What is reflection in .NET and how would you use it?**
-22. **Can you explain the concept of middleware in ASP.NET Core?**
-23. **Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.**
-24. **What is the purpose of the .NET Standard?**
-25. **Explain the differences between .NET Core, .NET Framework, and Xamarin.**
-26. **How does garbage collection work in .NET and how can you optimize it?**
-27. **What are attributes in C# and how can they be used?**
-28. **Can you describe the process of code compilation in .NET?**
-29. **What is the Global Assembly Cache (GAC) and when should it be used?**
-30. **How would you secure a web application in ASP.NET Core?**
-
-## Framework-Specific
-
-31. **What is MVC (Model-View-Controller)?**
-32. **Can you explain the difference between Razor Pages and MVC in ASP.NET Core?**
-33. **How do you perform validations in ASP.NET Core?**
-34. **Describe SignalR and its use cases.**
-35. **What are the benefits of using Blazor over traditional web technologies?**
-36. **How do you implement Web API versioning in ASP.NET Core?**
-37. **Explain the role of IApplicationBuilder in ASP.NET Core.**
-38. **What are Areas in ASP.NET Core and how do you use them?**
-39. **How do you manage sessions in ASP.NET Core applications?**
-40. **Describe how to implement caching in ASP.NET Core.**
-
-## Testing & Best Practices
-
-41. **What is Unit Testing in .NET?**
-42. **How do you mock dependencies in unit tests using .NET?**
-43. **Can you explain SOLID principles?**
-44. **What is Continuous Integration/Continuous Deployment (CI/CD) and how does it apply to .NET development?**
-45. **How do you ensure your C# code is secure?**
-46. **What are some common performance issues in .NET applications and how do you address them?**
-47. **Describe the Repository pattern and its benefits.**
-48. **How do you handle database migrations in Entity Framework?**
-49. **What tools do you use for debugging and profiling .NET applications?**
-50. **How do you stay updated with the latest .NET technologies and practices?**
-
+1. **What is reflection in .NET and how would you use it?**
+2. **Can you explain the concept of middleware in ASP.NET Core?**
+3. **Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.**
+4. **What is the purpose of the .NET Standard?**
+5. **Explain the differences between .NET Core, .NET Framework, and Xamarin.**
+6. **How does garbage collection work in .NET and how can you optimize it?**
+7. **What are attributes in C# and how can they be used?**
+8. **Can you describe the process of code compilation in .NET?**
+9. **What is the Global Assembly Cache (GAC) and when should it be used?**
+10. **How would you secure a web application in ASP.NET Core?**
     
 ## Basic
 
-### 1. What is .NET?
+### B1. What is .NET?
 
 **Answer:** .NET is a comprehensive development platform used for building a wide variety of applications, including web, mobile, desktop, and gaming. It supports multiple programming languages, such as C#, F#, and Visual Basic. .NET provides a large class library called Framework Class Library (FCL) and runs on a Common Language Runtime (CLR) which offers services like memory management, security, and exception handling.
 
-### 2. Can you explain the Common Language Runtime (CLR)?
+### B2. Can you explain the Common Language Runtime (CLR)?
 
 **Answer:** The CLR is a virtual machine component of the .NET framework that manages the execution of .NET programs. It provides important services such as memory management, type safety, exception handling, garbage collection, and thread management. The CLR converts Intermediate Language (IL) code into native machine code through a process called Just-In-Time (JIT) compilation. This ensures that .NET applications can run on any device or platform that supports the .NET framework.
 
-### 3. What is the difference between managed and unmanaged code?
+### B3. What is the difference between managed and unmanaged code?
 
 **Answer:** Managed code is executed by the CLR, which provides services like garbage collection, exception handling, and type checking. It's called "managed" because the CLR manages a lot of the functionalities that developers would otherwise need to implement themselves. Unmanaged code, on the other hand, is executed directly by the operating system, and all memory allocation, type safety, and security must be handled by the programmer. Examples of unmanaged code include applications written in C or C++.
 
-### 4. Explain the basic structure of a C# program.
+### B4. Explain the basic structure of a C# program.
 
 **Answer:** A basic C# program consists of the following elements:
 
@@ -109,7 +82,7 @@ namespace HelloWorld
 }
 ```
 
-### 5. What are Value Types and Reference Types in C#?
+### B5. What are Value Types and Reference Types in C#?
 
 **Answer:** In C#, data types are divided into two categories: Value Types and Reference Types. This distinction affects how values are stored and manipulated within memory.
 
@@ -137,11 +110,11 @@ Console.WriteLine(list2.Count); // Output: 4
 
 In the value type example, changing b does not affect a because b is a separate copy. In the reference type example, list2 is not a separate copy; it's another reference to the same list object as list1, so changes made through list2 are visible when accessing list1.
 
-### 6. What is garbage collection in .NET?
+### B6. What is garbage collection in .NET?
 
 **Answer:** Garbage collection (GC) in .NET is an automatic memory management feature that frees up memory used by objects that are no longer accessible in the program. It eliminates the need for developers to manually release memory, thereby reducing memory leaks and other memory-related errors. The GC operates on a separate thread and works in three phases: marking, relocating, and compacting. During the marking phase, it identifies which objects in the heap are still in use. During the relocating phase, it updates the references to objects that will be compacted. Finally, during the compacting phase, it reclaims the space occupied by the garbage objects and compacts the remaining objects to make memory allocation more efficient.
 
-### 7. Explain the concept of exception handling in C#.
+### B7. Explain the concept of exception handling in C#.
 
 **Answer:** Exception handling in C# is a mechanism to handle runtime errors, allowing a program to continue running or fail gracefully instead of crashing. It is done using the try, catch, and finally blocks. The try block contains code that might throw an exception, while catch blocks are used to handle the exception. The finally block contains code that is executed whether an exception is thrown or not, often for cleanup purposes.
 
@@ -160,7 +133,7 @@ finally {
 }
 ```
 
-### 8. What are the different types of classes in C#?
+### B8. What are the different types of classes in C#?
 
 **Answer:** In C#, classes can be categorized based on their functionality and accessibility:
 
@@ -172,7 +145,7 @@ finally {
 
 Each type serves different purposes in the context of object-oriented programming and design patterns.
 
-### 9. Can you describe what a namespace is and how it is used in C#?
+### B9. Can you describe what a namespace is and how it is used in C#?
 
 **Answer:** A namespace in C# is used to organize code into a hierarchical structure. It allows the grouping of logically related classes, structs, interfaces, enums, and delegates. Namespaces help avoid naming conflicts by qualifying the uniqueness of each type. For example, the `System` namespace in .NET includes classes for basic system operations, such as console input/output, file reading/writing, and data manipulation.
 
@@ -193,7 +166,7 @@ namespace MyApplication
 
 In this example, the System namespace is used to access the Console class, and MyApplication is a custom namespace for organizing the application's code. Namespaces are essential for managing the scope of names in larger programming projects to avoid name collisions.
 
-### 10. What is encapsulation?
+### B10. What is encapsulation?
 
 **Answer:** Encapsulation is a fundamental principle of object-oriented programming (OOP) that involves bundling the data (attributes) and methods (operations) that operate on the data into a single unit, or class, and restricting access to the internals of that class. This is typically achieved through the use of access modifiers such as `private`, `public`, `protected`, and `internal`. Encapsulation helps to protect an object's internal state from unauthorized access and modification by external code, promoting data integrity and security.
 
@@ -230,7 +203,9 @@ class Program
 
 In this example, the name field of the Person class is encapsulated and only accessible via the Name property. This approach allows the Person class to control how the name field is accessed and modified, ensuring that any rules or validations about the data can be applied within the class itself.
 
-### 11. Explain polymorphism and its types in C#.
+## Intermediate
+
+### I1. Explain polymorphism and its types in C#.
 
 **Answer:** Polymorphism is a core concept in object-oriented programming (OOP) that allows objects to be treated as instances of their parent class rather than their actual derived class. This enables methods to perform different tasks based on the object that invokes them, enhancing flexibility and enabling code reusability. In C#, polymorphism can be implemented in two ways: static (compile-time) polymorphism and dynamic (runtime) polymorphism.
 
@@ -294,7 +269,7 @@ class Program
 
 In the example above, the Calculator class demonstrates static polymorphism through method overloading, allowing the Add method to be called with different numbers of parameters. The Animal and Dog classes illustrate dynamic polymorphism, where the Speak method in the Dog class overrides the Speak method in its base class, Animal. The type of polymorphism used depends on the object reference at runtime, showcasing polymorphism's flexibility in OOP.
 
-### 12. What are delegates and how are they used in C#?
+### I2. What are delegates and how are they used in C#?
 
 **Answer:** Delegates in C# are type-safe function pointers or references to methods with a specific parameter list and return type. They allow methods to be passed as parameters, stored in variables, and returned by other methods, which enables flexible and extensible programming designs such as event handling and callback methods. Delegates are particularly useful in implementing the observer pattern and designing frameworks or components that need to notify other objects about events or changes without knowing the specifics of those objects.
 
@@ -338,7 +313,7 @@ class Program
 
 In this example, the Operation delegate is defined to point to any method that accepts an int and returns void. Initially, op is set to the Double method, demonstrating a single-cast delegate. It is then reassigned to the Triple method, and finally, it is used as a multicast delegate to call both Double and Triple methods in sequence. This demonstrates how delegates in C# provide a flexible mechanism for method invocation and can be used to implement event handlers and callbacks.
 
-### 13. Describe what LINQ is and give an example of where it might be used.
+### I3. Describe what LINQ is and give an example of where it might be used.
 
 **Answer:** LINQ (Language Integrated Query) is a powerful feature in C# that allows developers to write expressive, readable code to query and manipulate data. It provides a uniform way to query various data sources, such as collections in memory, databases (via LINQ to SQL, LINQ to Entities), XML documents (LINQ to XML), and more. LINQ queries offer three main benefits: they are strongly typed, offer compile-time checking, and support IntelliSense, which enhances developer productivity and code maintainability.
 
@@ -373,7 +348,7 @@ class Program
 
 In this example, a LINQ query is used to filter a list of integers, selecting only the even numbers. The query is expressed using LINQ's query syntax, which closely resembles SQL in its readability and structure. This demonstrates how LINQ makes it easier to work with collections and other data sources by abstracting the complexity of different data manipulation operations.
 
-### 14. What is the difference between an abstract class and an interface?
+### I4. What is the difference between an abstract class and an interface?
 
 **Answer:** In C#, both abstract classes and interfaces are types that enable polymorphism, allowing objects of different classes to be treated as objects of a common super class. However, they serve different purposes and have different rules:
 
@@ -435,7 +410,7 @@ class Program
 
 In this example, Animal is an abstract class that provides a default implementation of the Sleep method and an abstract Eat method that must be overridden. IMovable is an interface that defines a contract with a Move method that must be implemented. Dog inherits from Animal and implements IMovable, thereby fulfilling both the contract defined by the interface and extending the functionality provided by the abstract class.
 
-### 15. How do you manage memory in .NET applications?
+### I5. How do you manage memory in .NET applications?
 
 **Answer:** Memory management in .NET applications is primarily handled automatically by the Garbage Collector (GC), which provides a high-level abstraction for memory allocation and deallocation, ensuring that developers do not need to manually free memory. However, understanding and cooperating with the GC can help improve your application's performance and memory usage. Here are key aspects of memory management in .NET:
 
@@ -500,7 +475,7 @@ class Program
 
 In this example, ResourceHolder implements IDisposable to properly manage both managed and unmanaged resources. The using statement ensures that Dispose is called automatically, providing a robust pattern for resource management in .NET applications.
 
-### 16. Explain the concept of threading in .NET.
+### I6. Explain the concept of threading in .NET.
 
 **Answer:** Threading in .NET allows for the execution of multiple operations simultaneously within the same process. It enables applications to perform background tasks, UI responsiveness, and parallel computations, improving overall application performance and efficiency. The .NET framework provides several ways to create and manage threads:
 
@@ -543,7 +518,7 @@ In this example, a new thread is created and started to execute the DoWork metho
 
 Using threads can significantly improve the responsiveness and performance of your application but also introduces complexity, such as the need for thread synchronization to avoid race conditions and deadlocks. Proper understanding and careful management are essential when working with threads in .NET.
 
-### 17. What is async/await and how does it work?
+### I7. What is async/await and how does it work?
 
 **Answer:** In C#, `async` and `await` are keywords that simplify writing asynchronous code, making it more readable and maintainable. This feature allows developers to perform non-blocking operations without the complex code traditionally associated with asynchronous programming, such as callbacks or manual thread management. The `async` modifier indicates that a method is asynchronous and may contain one or more `await` expressions. The `await` keyword is applied to a task, indicating that the method should pause until the awaited task completes, allowing other operations to run concurrently without blocking the main thread.
 
@@ -580,7 +555,7 @@ In this example, DownloadContentAsync is an asynchronous method that downloads c
 
 Async/await simplifies asynchronous programming by allowing developers to write code that's both easy to read and maintain, resembling synchronous code while providing the benefits of asynchronous execution.
 
-### 18. Describe the Entity Framework and its advantages.
+### I8. Describe the Entity Framework and its advantages.
 
 **Answer:** Entity Framework (EF) is an open-source object-relational mapping (ORM) framework for .NET. It enables developers to work with databases using .NET objects, eliminating the need for most of the data-access code that developers usually need to write. Entity Framework provides a high-level abstraction over database connections and operations, allowing developers to perform CRUD (Create, Read, Update, Delete) operations without having to deal with the underlying database SQL commands directly.
 
@@ -641,7 +616,7 @@ In this example, BloggingContext is the database context that manages the databa
 
 Entity Framework significantly simplifies data access in .NET applications, making it an essential tool for rapid development while ensuring applications are maintainable and scalable.
 
-### 19. What are extension methods and where would you use them?
+### I9. What are extension methods and where would you use them?
 
 **Answer:** Extension methods in C# allow developers to add new methods to existing types without modifying, deriving from, or recompiling the original types. They are static methods defined in a static class, but called as if they were instance methods on the extended type. Extension methods provide a flexible way to extend the functionality of a class or interface.
 
@@ -692,7 +667,7 @@ In this example, ToPascalCase is an extension method defined for the String clas
 
 Extension methods are a powerful feature for extending the capabilities of types, especially when direct modifications to the class are not possible or desirable.
 
-### 20. How do you handle exceptions in a method that returns a Task?
+### I10. How do you handle exceptions in a method that returns a Task?
 
 **Answer:** In asynchronous programming with C#, when a method returns a `Task` or `Task<T>`, exceptions should be handled within the task to avoid unhandled exceptions that can crash the application. Exceptions thrown in a task are captured and placed on the returned task object. To handle these exceptions, you can use a try-catch block within the asynchronous method, or you can inspect the task after it has completed for any exceptions.
 
@@ -793,7 +768,9 @@ In this example, DivideAsync performs a division operation asynchronously and ma
 
 Handling exceptions in tasks is crucial for writing robust and error-resistant asynchronous C# applications, ensuring that your application can gracefully recover from errors encountered during asynchronous operations.
 
-### 21. What is reflection in .NET and how would you use it?
+## Advanced
+
+### A1. What is reflection in .NET and how would you use it?
 
 **Answer:** Reflection in .NET is a powerful feature that allows runtime inspection of assemblies, types, and their members (such as methods, fields, properties, and events). It enables creating instances of types, invoking methods, and accessing fields and properties dynamically, without knowing the types at compile time. Reflection is used for various purposes, including building type browsers, dynamically invoking methods, and reading custom attributes.
 
@@ -840,7 +817,7 @@ In this example, reflection is used to obtain the Type object for MyClass, creat
 
 Using reflection comes with a performance cost, so it should be used judiciously, especially in performance-critical paths of an application.
 
-### 22. Can you explain the concept of middleware in ASP.NET Core?
+### A2. Can you explain the concept of middleware in ASP.NET Core?
 
 **Answer:** Middleware in ASP.NET Core is software that's assembled into an application pipeline to handle requests and responses. Each component in the middleware pipeline is responsible for invoking the next component in the sequence or short-circuiting the chain if necessary. Middleware components can perform a variety of tasks, such as authentication, routing, session management, and logging.
 
@@ -893,7 +870,7 @@ In this example, CustomMiddleware is defined with an InvokeAsync method that ASP
 
 Middleware components in ASP.NET Core provide a powerful way to compose your application's request-handling pipeline, allowing for modular and reusable components that can encapsulate request-processing logic.
 
-### 23. Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.
+### A3. Describe the Dependency Injection (DI) pattern and how it's implemented in .NET Core.
 
 **Answer:** Dependency Injection (DI) is a design pattern that facilitates loose coupling between software components by removing the direct dependencies among them. Instead of instantiating dependencies directly, components receive their dependencies from an external source (often an inversion of control container). DI makes your code more modular, easier to test, maintain, and extend.
 
@@ -960,7 +937,7 @@ In this example, IGreetingService is an interface defining a service contract, a
 
 Dependency Injection in .NET Core is a foundational feature that supports the development of decoupled and easily testable applications.
 
-### 24. What is the purpose of the .NET Standard?
+### A4. What is the purpose of the .NET Standard?
 
 **Answer:** The .NET Standard is a formal specification of .NET APIs that are intended to be available on all .NET implementations. The goal of the .NET Standard is to establish greater uniformity in the .NET ecosystem. It enables developers to create libraries that are compatible across different .NET platforms, such as .NET Core, .NET Framework, Xamarin, and others, with a single codebase. This simplifies the development process and enhances code reuse across projects and platforms.
 
@@ -987,7 +964,7 @@ In this example, the class library targets .NET Standard 2.0, meaning it can run
 
 The .NET Standard facilitates the development of portable libraries and helps unify the .NET ecosystem, making it easier for developers to share and reuse code across different .NET platforms.
 
-### 25. Explain the differences between .NET Core, .NET Framework, and Xamarin.
+### A5. Explain the differences between .NET Core, .NET Framework, and Xamarin.
 
 **Answer:** .NET Core, .NET Framework, and Xamarin are all part of the .NET ecosystem, but they serve different purposes and are used in different types of projects. Understanding the differences between them can help you choose the right technology for your specific needs.
 
@@ -1020,7 +997,7 @@ Here's a simple comparison:
 
 .NET 5 and onwards (rebranded from .NET Core) aim to unify these platforms under a single .NET runtime and framework that can be used everywhere and that supports all types of application development.
 
-### 26. How does garbage collection work in .NET and how can you optimize it?
+### A6. How does garbage collection work in .NET and how can you optimize it?
 
 **Answer:** Garbage Collection (GC) in .NET is an automatic memory management feature that helps in reclaiming the memory used by objects that are no longer accessible in the application. It eliminates the need for manual memory management, reducing the risks of memory leaks and other memory-related issues.
 
@@ -1087,7 +1064,7 @@ public class ResourceWrapper : IDisposable
 By understanding and optimizing the .NET garbage collector, developers can improve their applications' performance and reliability.
 
 
-### 27. What are attributes in C# and how can they be used?
+### A7. What are attributes in C# and how can they be used?
 
 **Answer:** Attributes in C# are a powerful way to add declarative information to your code. They are used to add metadata, such as compiler instructions, annotations, or custom information, to program elements (classes, methods, properties, etc.). Attributes can influence the behavior of certain components at runtime or compile time, and they can be queried through reflection.
 
@@ -1144,7 +1121,7 @@ In this example, MyCustomAttribute is defined with a property Description. It ca
 
 Attributes extend the capabilities of C# by allowing you to define additional information about the behavior and structure of your code in a declarative manner. They are a key part of many .NET frameworks and libraries, enabling various runtime behaviors and compile-time checks.
 
-### 28. Can you describe the process of code compilation in .NET?
+### A8. Can you describe the process of code compilation in .NET?
 
 **Answer:** The process of code compilation in .NET involves converting high-level code (such as C#) into a platform-independent Intermediate Language (IL) and then into platform-specific machine code. This process is facilitated by the .NET Compiler Platform ("Roslyn" for C# and Visual Basic) and the Common Language Runtime (CLR). Here's an overview of the steps involved:
 
@@ -1183,7 +1160,7 @@ public class Program
 This simple program is compiled to IL when built and then JIT-compiled to native code by the CLR when executed.
 Understanding the compilation process in .NET is crucial for grasping how .NET applications are built, deployed, and executed across different environments and platforms.
 
-### 29. What is the Global Assembly Cache (GAC) and when should it be used?
+### A9. What is the Global Assembly Cache (GAC) and when should it be used?
 
 **Answer:** The Global Assembly Cache (GAC) is a machine-wide code cache for the Common Language Runtime (CLR) in the .NET Framework. It stores assemblies specifically designated to be shared by several applications on the computer. The GAC is used to store shared .NET assemblies that have strong names (which are unique identifiers consisting of a name, version number, culture information, and a public key token).
 
@@ -1213,7 +1190,7 @@ Note: With the introduction of .NET Core and its focus on application-local depl
 
 The GAC plays a critical role in assembly sharing and versioning in the .NET Framework, facilitating the management of common libraries across applications on a single machine.
 
-### 30. How would you secure a web application in ASP.NET Core?
+### A10. How would you secure a web application in ASP.NET Core?
 
 **Answer:** Securing a web application in ASP.NET Core involves implementing a series of best practices and utilizing built-in security features to protect against common vulnerabilities and threats. Here are key strategies to consider:
 
