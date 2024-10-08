@@ -3,6 +3,8 @@
 Link1 https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c<br>
 Link2 https://bool.dev/blog/detail/voprosy-na-sobesedovanii-dlya-senior-net-developer
 
+async https://dev.to/tyrrrz/interview-question-async-await-c-34in<br>
+
 ## Basic
 
 1. **What is .NET?**
